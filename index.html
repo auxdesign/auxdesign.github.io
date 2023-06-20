@@ -6,6 +6,27 @@
         <title>GridX Explore</title>
         <!-- CSS -->
     </head>
+    <script>
+(function (m, a, z, e) {
+  var s, t;
+  try {
+    t = m.sessionStorage.getItem('maze-us');
+  } catch (err) {}
+
+  if (!t) {
+    t = new Date().getTime();
+    try {
+      m.sessionStorage.setItem('maze-us', t);
+    } catch (err) {}
+  }
+
+  s = a.createElement('script');
+  s.src = z + '?t=' + t + '&apiKey=' + e;
+  s.async = true;
+  a.getElementsByTagName('head')[0].appendChild(s);
+  m.mazeUniversalSnippetApiKey = e;
+})(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '8768b51a-3878-4d2a-ad41-4c10a9b23924');
+</script>
     <body style="background-color: black; display: flex; justify-content: center;">
         <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1280" height="832" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fy48WvoqxVffY8zRjZThU80%2F%25F0%259F%2594%25AC-GridX-Explore-(Maze)%3Fpage-id%3D455%253A174309%26type%3Ddesign%26node-id%3D525-178776%26viewport%3D1%252C143%252C0.08%26scaling%3Dmin-zoom%26starting-point-node-id%3D455%253A174328%26hotspot-hints%3D0" allowfullscreen>
         </iframe>
